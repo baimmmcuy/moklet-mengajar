@@ -12,19 +12,20 @@
   
   <style>
     :root {
-      --bg-dark: #07090e;
-      --bg-surface: #0e131f;
-      --bg-card: rgba(18, 24, 38, 0.65);
+      --bg-dark: #080305;
+      --bg-surface: #14070a;
+      --bg-card: rgba(26, 11, 16, 0.72);
       --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-accent: rgba(99, 102, 241, 0.35);
-      --accent-indigo: #6366f1;
-      --accent-cyan: #06b6d4;
+      --border-accent: rgba(225, 29, 72, 0.35);
+      --accent-red: #e11d48;
+      --accent-telkom: #e1251b;
+      --accent-ruby: #f43f5e;
+      --accent-rose: #fb7185;
       --accent-emerald: #10b981;
-      --accent-rose: #f43f5e;
       --accent-amber: #f59e0b;
       --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --text-dim: #64748b;
+      --text-muted: #cbd5e1;
+      --text-dim: #94a3b8;
     }
 
     * {
@@ -45,8 +46,8 @@
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       background-image: 
-        radial-gradient(circle at 10% 15%, rgba(99, 102, 241, 0.09) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.07) 0%, transparent 45%),
+        radial-gradient(circle at 10% 15%, rgba(225, 29, 72, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(244, 63, 94, 0.08) 0%, transparent 45%),
         radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
       background-size: 100% 100%, 100% 100%, 36px 36px;
     }
@@ -75,7 +76,7 @@
     .reveal-4 { animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both; }
 
     /* ========================================================================== */
-    /* KARTU GLASSMORPHISM & EFEK HOVER MEWAH */
+    /* KARTU GLASSMORPHISM & EFEK HOVER MEWAH (TEMA TELKOM RED) */
     /* ========================================================================== */
     .glass-card {
       background: var(--bg-card);
@@ -91,12 +92,12 @@
     
     .glass-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(255, 255, 255, 0.18);
-      box-shadow: 0 16px 35px -10px rgba(0, 0, 0, 0.4), 0 0 25px -8px rgba(99, 102, 241, 0.2);
+      border-color: rgba(225, 29, 72, 0.35);
+      box-shadow: 0 16px 35px -10px rgba(0, 0, 0, 0.5), 0 0 25px -6px rgba(225, 29, 72, 0.25);
     }
 
-    .glow-indigo {
-      box-shadow: 0 0 45px -12px rgba(99, 102, 241, 0.3);
+    .glow-red {
+      box-shadow: 0 0 45px -12px rgba(225, 29, 72, 0.35);
     }
     .glow-emerald {
       box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.3);
@@ -104,12 +105,12 @@
 
     /* Gradient Text */
     .text-gradient {
-      background: linear-gradient(135deg, #ffffff 25%, #94a3b8 100%);
+      background: linear-gradient(135deg, #ffffff 25%, #cbd5e1 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .text-gradient-indigo {
-      background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #38bdf8 100%);
+    .text-gradient-red {
+      background: linear-gradient(135deg, #ffffff 10%, #fda4af 45%, #e11d48 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -135,15 +136,15 @@
       outline: none;
     }
     .btn-primary {
-      background: linear-gradient(135deg, #4f46e5, #6366f1);
+      background: linear-gradient(135deg, #e11d48, #be123c);
       color: #ffffff;
       border: 1px solid rgba(255, 255, 255, 0.25);
-      box-shadow: 0 4px 20px rgba(79, 70, 229, 0.35);
+      box-shadow: 0 4px 20px rgba(225, 29, 72, 0.35);
     }
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(79, 70, 229, 0.5);
-      background: linear-gradient(135deg, #4338ca, #4f46e5);
+      box-shadow: 0 8px 30px rgba(225, 29, 72, 0.5);
+      background: linear-gradient(135deg, #be123c, #9f1239);
     }
     .btn-primary:active {
       transform: translateY(0);
@@ -154,8 +155,8 @@
       border: 1px solid var(--border-subtle);
     }
     .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.22);
+      background: rgba(225, 29, 72, 0.1);
+      border-color: rgba(225, 29, 72, 0.35);
       transform: translateY(-2px);
     }
 
@@ -172,10 +173,10 @@
       text-transform: uppercase;
       border: 1px solid var(--border-subtle);
     }
-    .pill-indigo {
-      background: rgba(99, 102, 241, 0.12);
-      color: #818cf8;
-      border-color: rgba(99, 102, 241, 0.3);
+    .pill-red {
+      background: rgba(225, 29, 72, 0.15);
+      color: #fda4af;
+      border-color: rgba(225, 29, 72, 0.4);
     }
     .pill-emerald {
       background: rgba(16, 185, 129, 0.12);
@@ -195,25 +196,25 @@
       z-index: 100;
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      background: rgba(7, 9, 14, 0.8);
-      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(8, 3, 5, 0.82);
+      border-bottom: 1px solid rgba(225, 29, 72, 0.15);
     }
 
-    /* SVG Node Highlighting */
+    /* SVG Node Highlighting (Red Pulse) */
     .flow-node {
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
     }
     .flow-node:hover rect,
     .flow-node:hover polygon {
-      stroke: #818cf8 !important;
+      stroke: #fb7185 !important;
       stroke-width: 2px !important;
     }
     .flow-node.active-node rect,
     .flow-node.active-node polygon {
-      stroke: #38bdf8 !important;
+      stroke: #f43f5e !important;
       stroke-width: 2.8px !important;
-      filter: drop-shadow(0 0 14px rgba(56, 189, 248, 0.7));
+      filter: drop-shadow(0 0 14px rgba(244, 63, 94, 0.75));
     }
     .flow-node.active-node text {
       font-weight: 700;
@@ -247,9 +248,83 @@
     }
     .slide-tab.active {
       color: #fff;
-      background: rgba(99, 102, 241, 0.15);
-      border-color: rgba(99, 102, 241, 0.4);
-      box-shadow: 0 0 18px rgba(99, 102, 241, 0.2);
+      background: rgba(225, 29, 72, 0.18);
+      border-color: rgba(225, 29, 72, 0.5);
+      box-shadow: 0 0 18px rgba(225, 29, 72, 0.25);
+    }
+    .pill-emerald {
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+    .pill-amber {
+      background: rgba(245, 158, 11, 0.12);
+      color: #fbbf24;
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(7, 9, 14, 0.8);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    /* SVG Node Highlighting (Red Pulse) */
+    .flow-node {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+    .flow-node:hover rect,
+    .flow-node:hover polygon {
+      stroke: #fb7185 !important;
+      stroke-width: 2px !important;
+    }
+    .flow-node.active-node rect,
+    .flow-node.active-node polygon {
+      stroke: #f43f5e !important;
+      stroke-width: 2.8px !important;
+      filter: drop-shadow(0 0 14px rgba(244, 63, 94, 0.75));
+    }
+    .flow-node.active-node text {
+      font-weight: 700;
+      fill: #ffffff !important;
+    }
+    .flow-node.success-node rect,
+    .flow-node.success-node polygon {
+      stroke: #10b981 !important;
+      stroke-width: 2.8px !important;
+      filter: drop-shadow(0 0 16px rgba(16, 185, 129, 0.8));
+    }
+
+    /* Tab switcher for Challenge slides */
+    .slide-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      background: transparent;
+    }
+    .slide-tab:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .slide-tab.active {
+      color: #fff;
+      background: rgba(225, 29, 72, 0.22);
+      border-color: rgba(225, 29, 72, 0.55);
+      box-shadow: 0 0 18px rgba(225, 29, 72, 0.3);
     }
 
     /* Variable pulse update */
@@ -258,8 +333,8 @@
     }
     @keyframes flashVal {
       0% {
-        background-color: rgba(16, 185, 129, 0.4);
-        color: #6ee7b7;
+        background-color: rgba(225, 29, 72, 0.4);
+        color: #fecdd3;
       }
       100% {
         background-color: transparent;
@@ -272,14 +347,14 @@
       height: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #080b12;
+      background: #080305;
     }
     ::-webkit-scrollbar-thumb {
-      background: #1e293b;
+      background: #3f1520;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #334155;
+      background: #e11d48;
     }
   </style>
 </head>
@@ -287,33 +362,33 @@
 
   <!-- NAVIGATION -->
   <nav>
-    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between;">
       
-      <!-- Brand & Founder Badge -->
+      <!-- SMK Telkom Malang Brand & Logo -->
       <div style="display: flex; align-items: center; gap: 14px;">
-        <div style="width: 40px; height: 40px; border-radius: 11px; background: linear-gradient(135deg, #6366f1, #06b6d4); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(99, 102, 241, 0.45);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
-          </svg>
+        <!-- Official SMK Telkom Malang Logo -->
+        <div style="position: relative; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 4px 14px rgba(225, 29, 72, 0.35)); background: #ffffff; border-radius: 12px; padding: 4px; border: 1px solid rgba(225, 29, 72, 0.25);">
+          <img src="data:image/jpeg;base64,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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQxSTphSiQAggCwgQgQQAAAAAAAABSBZY7jYABQpILZTiRb6AAAAAAAABBhxQCTCgBhTgjASjBjgAAAAAAAAAAAABhQgQSgQAAAAgAAAAAAAAAAAAAAAC4JLJioKpK5qoAAAAAAAAAAAAAAADAAAQDDxAhRwoAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/xAAC/9oADAMBAAIAAwAAABDzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzT/Tfb77X/AP5/88888888888888888CCCCQN9999W88888888888888888CCCCV89999W88888888888888881ODENU8x+90U88888888888888888804/Z3dy+88888888888888888888q8604u88u8888888888888888888q88084888e888888888888888888q8887bs+v1888888888888888888q888p9s+9V888888888888888888q888p9999V888888888888888888q++8r19953888888888888888888sMMc8sfP8APPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPOMDIJxOPKBEOCHNPOMONPPPPPPPPOFPmwxc/PAHw647FfQ11PPPPPPPPPFGKFFGPPDIAAMNJFBHHPPPPPPPPPPPPDMPPKNPPMPOOPPPPPPPPPPPPPPPPH8zx1Bh6335+/PPPPPPPPPPPPPPPLJMHEANAPHOI/PPPPPPPPPPPPPPPPPPPPPPPPPLLPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP/EAC0RAAEDAgIIBQUAAAAAAAAAAAEAAgMEERBAFCAhMkJRUnESIjFBkRMwYICh/9oACAECAQE/APziep+i5o8N7oV7PdhWnxdLkK6Lk5Nq4HcVu6BBRIHqnVMI4r9lpcfJy0yPpcjWN9mFQzGXxeW1sjX77O2rDPJEdh2clJK+Q3cdWj3X9xka/fZ2+3R7r+4yNVTvlLS0jYjRz9I+VolR0f1GknHAnMezeaRi1j3brSUKabpWjTdK0WbkFTxOjDr225UgEWIuqikt54x3CgphYOf8YWKscq31wIxAxIyjcXYA6jsm3FyARGFygU7Jtxcm42GDsm3FybquyYV1dOQ1Sczcq5/Vv//EADoRAAIABAIGBAoLAAAAAAAAAAECAAMEBQYREiAxMkBxITRR0RATFlNUYHORkrEUFSIzQmFicoCCwf/aAAgBAwEBPwD14sWHhdpE9/pJlGW4G7pA5w+BawblZJPMER5D3P0in97d0Ngm6jZOpz/Zu6KnC96pwSabTHbLIaGVkYqykEbQegiER3YKilidgAzMSbBc5ozMoIP1kCBhmv8AOSfee6PJet89J957oXC0/wDFUyxyBMXW1i3mSBOLlwSejLLLgcC9Vrfar8tW7WWiuUo+NTRmAfZmrvDvEUVBTUSaMpOnLpc7x1cVb9JyfgcC9Vrfar8tVt08tbFW/Scn4HDN+o7XKqJdQk06bggqAYXF1jO2e680MeVli9KPwN3QmKbE564BzRh/kU1ZSVQzp6iXM/awMNunl4J9XS0/309E/Inphr7ages58laPr+1efPwtDYhtY2TGPJTF7uUiueSZSuAgbPSHbwsuZMlOHluyMNjKciIsGKmnEUlcw0iMkndp7Gi7X9y7SaRslHQ0wbTyhmZiSxJJ2k+qZjPwkwOHOqOHOqOHOqOJyjIfxb//xABLEAABAgQABgwLBwIEBwAAAAABAgMABAUREhMhMTRxEBUyNUFQUVNyc5GxBhQgIjNCUmGBkqEWMEBDVILBI2Jjg6LRJERwgJDh8P/aAAgBAQABPwL/AL0CQBcmAtJzKH4UuITnWB8eIprRnugYGTNAeeGZ1fbAm5kfnKjx6b55UePzfPGNsJznTAqU4PzPpCavMjOhB+kNVdk7tJTCHW3BdCgobL0yyyLuLA74draB6NonXkhVYmzmCB8INUnT+b9I2xneeMbYTvPqjx+c59UeNzXPrguuqzuL7YR6Vvpjv4im9Ge6B+6bcW0rCQqxiTqaXPNdslXLwGJyrZ0MfFf+0ElRuo3PL9y36Rvpjv4im9Ge6B/DN+kb6Y7+IpvRnugfwzfpG+mO/iKb0Z7oH8M36Rvpjv4im9Ge6B/DN+kb6Y7+IlJCgQcxhVLlDmSR8YNHZ4HFRtKOePZG0o549kbSjnj2RtN/jfSFUZ7gdTC6dOI/Lvqggg2It5KELWbJSSfdCKVOr9UJ1mE0N3hfT2RtH/jnsjaMc+eyNoxz57I2jTz57IFFYGdxZhFMk0kHAJ1nit6XZeTZxAMTdNcZ85vzk/UbGc2iUpF7Kf8Ak/3htpttOChISPdxc6oobUoJwrDNG3aOZV2wmsyx3SViGpyVd3Do1ZvIqMhg3daTk9YRTpANJDrg/qH/AE7LjrbQutYSPfDlYl07hKlfSFVp71W0iBWZn2UQitD12uyGJyXe3C8vJmPFM2gNzLqRmwtmXqEyxmVhJ9kxKzzMyMmRXCnyZyphu6GsquE8Ahbi3FYS1EnypKqKBCHzk4FcmviioaY9r8hKlJUFJNiIkJwTLeXdjONmordRKOFvP/H3NImcNBZVnSMmrieoaY9r8mSexMwhXwOo7JAUCDmMTsoqWc/sO5P3Ei5i5to++3bxPUNMe1+UwrCYaVyoB2XG0OoKFi4MTVKdbuprz08nDGbymBd1HSHE9Q0x7X5Uposv1Se7YE6ETDjS818h2XZdh3dtgwukShzYSfjDlFWNw6Drh6TmGd22bcvBsZ4ZTglOscT1DTHtflSmiy/VJ7tic0p3XDE26zkzp5Ian2HM5wT7/JqEvJ5Sk4LnIISgJhG7TrHE9Q0x7X5Uposv1Se7YnNKd17KVrRuVEQJ2ZH5kGfmva+kLmHl7pxWyjdp1jieoaY9r8qU0WX6pPdsTmlO6/uUbtOscT1DTHtflSmiy/VJ7tic0p3X9yjdp1jieoaY9r8qU0WX6pPdsTmlO6/uUbtOscT1DTHtflSmiy/VJ7tic0p3X9y2LrRrHE9Q0x7X5Uposv1ae7Ym5ArWpxByngMLbWg2Wkjy22nHTZCbxKyaWfOOVXdxOuRlHFlSmrkxtbJcyO0xtbJcyO0xtbJcyO0xtbJcyO0xtbJcyO0wlISkJGYCw2SAc4hcjLK9S2qDS0cDhjatXOCNq184IFLHC5CKfLJzgq1wABkAt/1EqVYMu5iWQCr1lHgjbuf51PZG3c/zqeyKTNuzUrhu58K1+WKzPPyuJDVhhXudUN1ydStJWoFPCLQDcAxUZsykqtxNsLMnWY26qPOJ+WJR0vSzLpzqQDEzWZ1Mw6EKSEpVYC0S7hcYbWfWSDFUqYlE4DfpT9IpU7UJl84ZBbSPOybFUm3JSWw2wL4QGXgjb2f9pHyxt7UOVHyxt7P+0j5YpE+9NodxtvNOceRPVmbamnW28EBBtmiTeL8qy6RYqTeH65OpedCcCyVEAW5IaXjGkL9pIPb+OndLmOsMSkpLIl2rNJ3Iy2jxdjmUdkAACwFo8I88t+6CkhKTwKzfCKO9jZFvlR5vZHhE/lZa/cYWkoUUnOIpu98r1SYm9Jf6Zhc8iUpzBzrKBgphhmYn5k5fOOVauSJdhuXZS22LJGwpKVCygCOQx4rK8w38ohzdOazDEtLFhr+g3uB6oiZnJSQQLi18yEiPtG3+mX2iEeETBPnMLSOXPDbiHEJWhV0nMYqWnzXTil73yvViJj07/WL74ldFY6tPdEzXGGHShLal2zkZokpvxtnG4tSRfhiarcswsoSlThGe2aPtG3+mX2iJWtyz6wgpUgnNfNsHwhZSspxC7A58kfaNr9MvtEbfSeKwrLwvYtlj7Rtfpl9oiWnGJpvDaOscn4OpsqZnXgrhOENRhmpzrKAhDuQZrwK1UOcT2RTKkJxKgoYLic4/mPCPPLfuhTOFRmnR6jyr6jHg+/gvuMn1xcaxDx8crFuAu4I1Jif02Z6wxTd75XqkxN6S/wBMw44twgqOZISNQijJlhJJLXDu+XC8l3dO61RL+gZ6AiqLK6hMX4FWHwiQo0s/KNOuFWEoXz2irSLUm62GybKTw+6PB1RxL6eALFvjFS0+a6cUve+V6sRMenf6xffE9UsTKMsNHzy0nCPs5IpdOM0vCWP6Sc/v90TZxMk8UZMFs2iXbxrzTd90q142gkf7/mh9vFvON33KiL6olFlySZWc6mgfpC92rWYmqMw3JqdQpWElGFl4YYQHH2UHMpxKe0xVKS1KsB1pRz2IPvihLUJ7BGZSDf4fg35ViYTguthUbR0/2FfNFVpUvLy+NauLEXGe94oWn/sMeEeeW/dFLZD1HW2fWK4ZdWw8lY3STFAZw5px0+on6qif06Z61UU3e+V6pMTekv8ATMT1PwpNmabGUNjDHu5Yps8ZN+/5at2P5hJCgCDkPkO7p3WqJf0DPQEVDT5rrDDSali04rH4HBZRtHiNReXlacJ5Vf8AuKbJeJy+CTdRN1GKlp8104pe98r1Yh/07/WK74mJdbCkhXrICgfcYos6h5gM2AW2M3KOWKloEz1ZiR0yX6Y2JzS5nrVd8SG90t1Ke6F7tWsxOb2P9Qe6JPTJXrkd8V7e89NMUPfFHQV+DnayiVfLWKKrZze0faMfpv8AVE/V1TbWKDeCm+XLFAZUZlbvqpTb4mPCPPLfuihb3jpqiqsYmfeHAo4Y+MUNnAkgrhWbxP6dM9aqKbvfK9UmJvSX+mYk9DY6Aiq0/wAVdwkD+kvN7jyRRKhgnxZw5D6M/wAeQ7undaol/QM9ARVWlNz718yzhCJOtiXlm2SzhYOS94+0aP0x+aJKbTNsB1II4LaoqWnzXTil73yvViJj07/WL74fkRN05geuG04B+ENOOyz4UnzVoP8A8IDqZ+nOYvOpBFuQw0tTLyF2yoVm1R9o0/pj80OKU88pVvOWrN7zEu2WpRps+q2BC92rWYnN7H+oPdEnpkr1yO+K9veemmKHvijoK/BzNLlJlzGLScL3G0bRSHIv5o2jp/sq+aGmm2kBCEhIHAImpGXmwkOjNmiXl2pdoNtiyRE1T5aaKS6k3HIbQhCW0JQkWAFhD1HknnFOKSbqz2MIQltCUJFgBYQ7R5F1xS1INznywlISkJAyCHmW321NuJukwiiSCVpVgqyG+fyF0SQUtSylWU3tfJAFhaJiVYmEYLqAY2hkP7/mjaGQ/v8AmiWlmpZoNtiyRD9Ikn3VOKCrnPYw02hpCUIFkpFhDlFkXHFLKVZTc5YACQAMwiZpMnMOYxaThcNjaJSRYlAvFX87PcxMUuTmFYa0edyjJG0Mh/f80S1Lk5ZWGhvzuU5dg0SQLmHgqz3tfJCm0rbKFDzSLEe6GqNItOJcCVXSbi5h+XbmGi24LpMStLlJVzDQDhW4T+KmqnKSq8BxRwrXsBeJaqycy5i0KOFwAi2xMzTEq3huqsITXKepQGEsft8nNCa3IKWEBasptfBNuLq5vivoJhh0svNu+yq8AggEcMeED132mR6qcI6zAziBmEY9nnE9sY9nnE9sBQOYw96FzomEbpHSGxjmecT2xj2ecT2wFJVmIOxjW72wxfXCnEJzqAhK0KzKB2cezzie2Mezzie2ApKsxvxDXN8V9BMTbOLLCuBxlCvplijP42QRc5UeafhB/wCNqp5C5/pTCeCHUFcutCTYqQQDrEbRz/Mp7YNEnwPQDtESs27KOBaDk9ZPLDhBl1kcKD3QjdI6QhQu2QOSDQ6hf0ST77xtJP8AMJ7RDD70o7hIuCDlTy+6EuBxkLHCm8J4FcOe8CmVF8YwsKN/aOU9sIU7LuXQShYMSb/jEs27yjLFZnXHJhbCVWQjIRymGKVNvthxDIwTmJyRMyL0rg45AGFmjwczzI6PENc3xX0ExUGcKkSTvsIR2GJCd8Wbm0+035vSigMec+77KMEfGE+rGEEowibADKYf8ITh/wBBkFPKqPtDNcy39YWb4Z5bmBoX+T/EI3SOkIvYRMeEFlkMNBQ9ox9oZrmW/rDiyta1n1jeJTQWeqEJ9XYq2+D8Ube9r4xUdPmenFJ3ul+jHhHnlv3R4ObqZ1J4hrm+K+gmGmcfSG2vaYHdGUZ4pDOKpyeVd1n4wn1YqxO1rtuQXiSSyubZS9uCrLBkqSBctMQu3n2zZbR/yX+V/EI3SOkIqZUKdMW9iJVLSplkO7jC86PEaTzTEPYGNcwNzhG2qJXJItdUIT6uxVt8Hoo297XxipafM9OKS814gwMYm4GXLHhCpKjL2IO6jwc3UzqTxDVaZNvzeMaSCCkDPyRLNFqXZbOdKAOyJujTK5xZbSMWtV78l4CbN4I5LQKJPhYTgC191eHWkOMqbWLhQsYfoU2hRxdlp+sbTT/MDtiTob2MCpiwSPV5YWnCQpPKIRRZ/GpBQLBQy3hSErQUKygixiYoU0hZxVlo4OWNpp/mB2xKUJ9TgL9koHBwmLebb3QmiT+GE4AtfdX2KlS5x2cW42jCSr3xTmFy8o22vdDPFTpPjSsa0QF8N+GDQ6hzSO2JiRflcHGpAws1o8HN1M6k8a1ianmZhKWlKSjBzgZ42xqXPudkLVNzSxhYxxXBkikSKpVlRXu15/d/4Cf/xAAtEAABAgQEBQUBAAMBAAAAAAABABEhMVHwEEFhcVCBobHxIDCRwdFAcIDhkP/aAAgBAQABPyH/AHQIgABMlA3I2L/y9aoBwIbTJbDaClI51IvlQHhL4ILJB3BdtsozjV5hbJoOOhSjNsE7DWyYpJe49yqE2BXYVwESrdn8iny51OZ8CVsp7TtWkmK8LZEBTR6aSZRJ4WlbKe2ZcNStlPbMuGpWyntmXDUrZT2zLhqQm3AxGi6YaZB/BXhi8EwJpUA73cEfqGuWam6eSKhwMsdB5A6bIa6TrITYymK+KLxRDO+EvroCAgwRDnC92EzGxQwvZ4QZIAgAOSWATUttH2QcHcgbhxd5GLZlqLwxdoV+ygpJqi+D6GmiHuFDQkBR+47t0J83lmdUT1YkoGZ+RCz+N790DYZr9g8JlnCbnHEgBzR8KMLIiT9J1nalSjSoR9IJBBBYjNPpedQC4fg97p6CoSIEZKUY88MSFNA5zBGLeyUimr6cHvdPSV/gTigynAxG6LQxsRv7BtztoOD3unpKMa/aGIwM0Cijn4X9RBIgggiYMD6i6MnXg97p7CUCEOnzQL4fK2RFCemd3UW0wWUT0DHAASYJl5xvng97p7CVnom0DrfpNA0b9IEEOC49BjHuIO4QiE6qzV4Pe6ewlZ6Y9M8sqs3ARWUbJM0KO3bGzV4Pe6ewlZ6ezZq8HvdPYSs9PZs1eD3unsJWens2avB73T2ErPT2SBAOfu4Pe6ewtUxn1JzF19b5JdFTNnls4OMdNFyr4+1fH2r4+1fH2rY+0LVhgUAxDsAjVR6LqZZe7h0cv4l49Z75BR0pr/EPZBQf5ENg6KDSBVEP4V46oEmkABmBByyPkDo+2+1QAEiHCEUTgIyR4gg+gFIGoRsiIjJAWYkBuhlohhQalT0OII5AYPWjcyOz9CjKag8bAZ39EC6t3Og4gZAJkmbDp2UImgNGP/cRJTNI6LcxICSSF4Wh4IBICC6P6osxM7BUfmG/sUDmQPaCDbEYq6UV3qjNYGrFuyC0ZXOSv4F34JNTgRmiYHGF0LN5RQJCXdhCwJRAnOCwKNqED0FcC6r2wxZqsLpdxkAOQ2b0AGZqItQWgsO5w6pNmXHcYPSWMeTRF2DKNdFiSDsWURgciQJa/wAYaoPtUUbkB2QZRD12MQci6P6pskRLdVkOTL09xLPRQXcVdKK31T7Y6AkBRNyUR+A+mxVVroi6fZgRKuSMBEOyi0TIeWYoGxdV7YYs1SLI+HJ9ioLhubQm8iDRkwQShgALNHCmKMt+aJnU2cXNLNVR7/XOAAcp+t0NNmlC2RKOjzP+GfxsUAk8xsV5Aot4YhYCGWxmvo/qshYKZmvwo1BARdKq6UV3qvmYeAdidlywLGSDWIHBGY9FiqrXTARbqFLWaMVNfwf+0hkZtWg2XVe2GL3WolutQPpMUJDPUCuyws1cP7HSrPX+QAwmgNQWqQeg4ZxLJjMW6qOj+quVUxA/7H1T+iL5ZBXSqulFZ6ptlJGn0vOiZ68Mj6NiqrXRH0JjqCjo2WA2GAgSUkkWRTqvbDFmqULIPUTl2KdiioPUlmZZmorNBhKuTBQZxsgKslPQM8grNXD+x0q71/kBJrGJiGXniAjP5lJ10BgjEy9yBYh1kCQN8yj9EEGQTcJgUATlvO9AJQ4QYAyAToSuwwCUxqAwFAFn0qEBLowc8vREYsgzkAABgAwTOqJGRGxWhhU4ABMS5c5lDTqbdQSgFAgwBaA0OUMpgMBQBEYEhFGboOBGBiJI/YnM7jvhQK4GR3DbAomp+gppL1iDIzpMCAQqc1ZuM0QS8d5h/UN56DAoseHJuamEwQYMHJOgCjjhZyTekkASSwE1IslmHD1hdlcmaltA4T9IdoV1AXTJj8y8OQtwEaF1d6K+1QkE1Ag5F4chjjNC+A+HTESbfiy6BBfAkAOV4AvDkIcYVBfgS24EG7wI2Z32nRamcTboid9WWh50Cw68LRIXWGTyMCAHQChCktFDml9qiEjEmAd0EXw2KLaJ+OipkyCkFtuYRF9LUeqKJwOIIH8RrIgjIhQ+Yw1DmjEIIdZExpgDlm10BBktsibgS2yEQDssjvE89L7TiYJeRFnTiSAAGaDIVBGPLC24HyRUhN9qmOksAIlMTUzZ7AYWEwASkBqrRRS8iEgusHZX2qs9Aupd8EtuvAlgIZPnIiCETAsdwnwRB7B0UvIhawGxMiZyWHNEwIARME8/M5WSCd9qjPO9GCAMQ4tBMhy1yRvWZTKJCQTP6FLyISC60dlfaoCH7MFO0QDIXWyOC6tuvATPKvjFDNOVnYyz7GDMmQRSg0oRUzIaqgLFkLqOXbmC8URzv7sLnfomWzR8pok4SmBQzIMVBXPyjBuvFE9ujkS+giLhhIEDBIBkNXAQhgxgTNzBg1UjLYJPyU4mLnd0R5K268VjoOE0Xjn4pdw0QqZzONFP/An/xAAtEAEAAgADBwQCAgIDAAAAAAABABEhMVEQQWFxobHwIDBQgZHBQPHR4XCAkP/aAAgBAQABPxD/ALoHKdUUAb1ZVF6iP4pQ3SBjC8/ghJa+JL1avySgwBsitexwPPIf5uG6jo+VAXzMbj3BuoUk48doIG5rfJMWJaank1+fX8wzkcnj/pNkB2TySOcf4xh+9/zwikHM78kPghjI9koS71nwYeo5heoEZLME7GPs+2vML7PgdEPghjI9rM5e34HRD4IYyPazOXt+B0Q+CGMj2szl7fgdEPghjI9rM5e34HRD4EbrrslZkaORPRH2c+IO42JZ/VohMb7kRaaTTAYZjlEC5gibMzltErzVn8qyl5Xs2t/BUVjwvvKQf9A2zTfquOJwJ8piZ4+LwQswrUipIqhl/smZyjyhgFqu4IiMUsWG4YgPjloAKBmkgnTNcRpJwTdTortS5a+pXt+GqxKN2bbUg3gRIaDCstJBQvhJA1Dj4w109aHxIYoLHQ2jCN5gvpzii48ZNxNTZQ7a3/guK6EHRvf3+NPS7ZFgaSM/ehfwaiAAREsT4foXZ6LsXHUqKBEgXa0dtS4qeRB+yvFkdzclfD+hdnpH1ClqlO0paKskFJLO6r+7wewKWh6ufD9C7PSLEurJntLczdv++zgNGb90Q3rtQEHRH1JhYNOlD4foXZ6vOadlJZRuCw1IARESxNmc3VAKfcUNnX/Owh4pr/JCkY592Nh0LWFnyZfT4foXZ6vOadnSu2U1Bv2jm3QpBeGfUGgIWI2PoIFriBydlN5iMY89o+H6F2erzmnZ0rt2pXiF44eYQar88nYcECrlIfZSAGzz2j4foXZ6vOadnSu32fPaPh+hdnq85p2dK7fZ89o+H6F2erzmnZ0rt9nz2j4foXZ6vOadnSu32UrJUHw7oXZ6vLadgQVxZQoVij4A00fTk+sJv2TJxVwIMKPTrD4e6f7c7fp9KBAgQEwD/wBIE0G1i5bhZDUXd79OURfJCj9/uFuP1uXj600AI32n4oQeG5BR/wAiXXXYhnLfJz4uexNcWaeSRzMWHqsKjjhBZbkRJqM31V7kmNcjL5voMnyTsYZFSaGQiJDfy4w7apMPV5w2VmHAss6NvCO/kVkkVwH0HZn085Uc3hYVa1HAsqudfcBT+cs19iyl9nbpVXZmCSqEA5BPH6zhpi7W0DDf9DwybhWfqAix0TYD43VDeUg5fZlg1XFj50hVMH22esuzLmOCcxnnv6mEYKMrdSj740sqmMU1BuPRRG9qS/6OJa4SKLNiTxWja+F4TTFOLTcm6BJo13kRCJbYFudkc/8AerloiSgK5ECj4zcizFDMbxnEyVVcKaiB1jsM0Y0HBj/DSCK3KQeGWCxA7bwZCBAi3l0fH6ylyc62v1hIZ/QxdSx3sAEyNnBFyy+dOGVIoLb5+M/S+S1zzOmLMfqjEWRtjjWJvLvZoIu10iM/FaNr4VMjf6eYow8WSc3CUGBDQBBbLzEENOd+aCUOSCvEKzfOGHhtUEuouBkRli6ugBpKKPH+2oSYeIg+j/DFXdbzOoYmwW5z1dBUOIgtzx+sm9ZPYGvzFJTHLFbXbEg+N1R8O4I0jngErIvYawJxK1iYiejyWueZ07Lr1vh8o8AJq9NaOLQrnbJnKcKPFaNj3UEwoGg8v5yRhpQdG7Po9vzWvZb4bV/HGP8As0t30QOycqLLNu7CXEmkcfj9ZdTWAb9Ixxwv+b9vJB87qlhoIzWMXXRvJMw8s7/0PJa54nTHRg9zOdmMbnDXn+nxe4biupJ4rRtfCHIyYzRalbNIwdJgHRicqV7dDFzK4+B0lLjTvuWXicTu7II/987K54bV/HGPozSGot6Nh42vBMwYnVQRBO6+qpBJjJuo2qrUc1g9yVituagWTzyHQQquWk5BFxhUBD/a/Jhwjz5YAIfQVZCaImSRFY3UW7PQPGo6JdsDUEBkBD72vOepUkZ7gyWWBCItqMcr43C4PkjRka/dO8DlknKAUBA66ERxwdUOWuwxttvS+DJ6Wd/7+IJTG/aqBTkTGgI2g23hbLTMLMLCgSwJkkWPSLbn8q25hUhQCMhA1WidjldYke3QYIBg8+k6wFTkBLaEXElUfH0cGl94H9IyllTUS5cav5pUeC1nQYqRBIBELif4B0njtc8ppnQRSshpGBIuNeCHTYqvHUYy9Kg5JoMCqcafZsQIAFqymxNGqgSLHelUh0+Co1K6SYZTFkXlc2Rv3LL9krFv5pP3ONZFcEJqD8SeLPDTFD+9ck+eoiJW9cESeU0zh9HBFDCFoM8KbeBI215l2KhYRh+FiQFlx/k+LO7j1EdMpXKYDiGsFnyZeZORyHAEeJ4jVpazZKqDWgtvKykHlD+C0D8K5ucOl5E4YJzL7oW7Pc2LTRLUuQQxucDnjDP7+WulKRotU6NHlNMaTWKNABmze4i4ccn9/OSlJgXaG3n+ggDjT9X39nXnNc6CPOa/Babv3eFKoIVOHRKSJWq5yV0zZ/7sspcaI0MV4NC0WPeMtUAjTMmwVjXshQCIlUY8pplpZ+MMS+qUDjYplAtZwm9PUKq4QZ0Gw/0Gz7q+/B8U/vLAxT4G7GuuLVx5zX4HjVKAcgYwyyUYRCCadwUmHOPlhRLLR8Lcs3RFyFiVBhUuHq0kTGl8uPY3aIZACWu6lQqvqqxgBooyBTAO8bvXaQTGmWsX4AQWDcFURG3kpwmAoCFrlgETHdgHYLuo4HRy7OxEu+LrGQ7lG8+c1+VvYBtJvbUdl1OB6VwPoAlQIMrdWX/gT//Z" alt="SMK Telkom Malang" width="40" height="40" style="object-fit: contain; display: block; border-radius: 6px;" />
         </div>
         <div>
           <div style="font-weight: 800; font-size: 1.15rem; letter-spacing: -0.02em; display: flex; align-items: center; gap: 8px;">
             <span>FLOWRUN</span>
-            <span style="font-size: 0.65rem; padding: 2px 7px; border-radius: 5px; background: rgba(99, 102, 241, 0.2); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.35); font-weight: 700;">EDUKASI VISUAL</span>
+            <span style="font-size: 0.65rem; padding: 2px 7px; border-radius: 5px; background: rgba(225, 29, 72, 0.22); color: #fda4af; border: 1px solid rgba(225, 29, 72, 0.45); font-weight: 700;">SMK TELKOM MALANG</span>
           </div>
-          <div style="font-size: 0.72rem; color: var(--text-dim); letter-spacing: 0.04em;">BY KINETIX ENTERPRISE</div>
+          <div style="font-size: 0.72rem; color: #fb7185; letter-spacing: 0.05em; font-weight: 600;">MOKLET IT SHOWCASE</div>
         </div>
       </div>
 
       <!-- Nav Links -->
-      <div style="display: flex; align-items: center; gap: 30px;" class="desktop-nav">
+      <div style="display: flex; align-items: center; gap: 26px;" class="desktop-nav">
         <a href="#pengenalan" style="color: var(--text-muted); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s;">Konsep Dasar</a>
-        <a href="#simulator" style="color: var(--text-muted); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s;">Simulator Interaktif</a>
-        <a href="#tantangan" style="color: #a5b4fc; text-decoration: none; font-size: 0.88rem; font-weight: 600; display: flex; align-items: center; gap: 6px;">
-          <span>Tantangan Sekolah</span>
-          <span style="width: 6px; height: 6px; border-radius: 50%; background: #6366f1;"></span>
+        <a href="#simulator" style="color: var(--text-muted); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s;">Simulator</a>
+        <a href="#tantangan" style="color: var(--text-muted); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s;">Tantangan</a>
+        <a href="#perkalian" style="color: var(--text-muted); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s;">Perkalian</a>
+        <a href="#kelompok" style="color: #fda4af; text-decoration: none; font-size: 0.88rem; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+          <span>Identitas Tim</span>
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: #e11d48;"></span>
         </a>
-        <a href="#perkalian" style="color: var(--text-muted); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s;">Perkalian Biasa</a>
       </div>
 
       <!-- Action -->
@@ -323,7 +398,7 @@
           <span id="soundLabel">Audio Nyala</span>
         </button>
         <a href="#simulator" class="btn btn-primary" style="font-size: 0.84rem; padding: 9px 18px;">
-          Coba Sekarang &rarr;
+          Coba Simulator &rarr;
         </a>
       </div>
 
@@ -334,18 +409,18 @@
   <header style="max-width: 1100px; margin: 0 auto; padding: 85px 24px 50px; text-align: center; position: relative;">
     
     <div class="reveal-1" style="display: inline-flex; margin-bottom: 22px;">
-      <div class="pill pill-indigo">
-        <span style="font-size: 1.1em;">✨</span> Logika Komputasi yang Mudah Dipahami
+      <div class="pill pill-red">
+        <span style="font-size: 1.1em;">🏛️</span> SMK TELKOM MALANG &bull; MOKLET SHOWCASE
       </div>
     </div>
     
     <h1 class="reveal-2 text-gradient" style="font-size: clamp(2.3rem, 5vw, 4.1rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.03em; margin-bottom: 22px;">
       Belajar Coding Tidak Harus Pusing.<br />
-      <span class="text-gradient-indigo">Flowrun Mengubah Logika Menjadi Gambar Nyata.</span>
+      <span class="text-gradient-red">Flowrun Mengubah Logika Menjadi Gambar Nyata.</span>
     </h1>
 
     <p class="reveal-3" style="max-width: 720px; margin: 0 auto 36px; font-size: clamp(1rem, 1.8vw, 1.2rem); color: var(--text-muted); font-weight: 400; line-height: 1.8;">
-      Sebagai programmer profesional, saya meyakini bahwa hal terpenting dalam coding bukanlah menghafal titik-koma, melainkan <strong>memahami bagaimana data mengalir</strong>. Dari pertambahan sederhana hingga percabangan syarat lulus sekolah, mari lihat bagaimana komputer berpikir!
+      Dipersembahkan oleh siswa <strong>SMK Telkom Malang (Moklet)</strong> untuk membuktikan bahwa hal terpenting dalam coding bukanlah menghafal titik-koma, melainkan <strong>memahami bagaimana data mengalir</strong>. Mari pelajari logika komputer dengan cara yang visual dan elegan!
     </p>
 
     <div class="reveal-4" style="display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 50px;">
@@ -353,9 +428,9 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
         Jalankan Contoh Penjumlahan
       </a>
-      <a href="#tantangan" class="btn btn-secondary" style="padding: 13px 26px; font-size: 0.96rem;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
-        Lihat Tantangan Nilai Lulus
+      <a href="#kelompok" class="btn btn-secondary" style="padding: 13px 26px; font-size: 0.96rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        Lihat Anggota Kelompok
       </a>
     </div>
 
@@ -368,7 +443,7 @@
       </div>
       <div class="glass-card" style="padding: 22px 24px;">
         <div style="font-size: 1.8rem; margin-bottom: 8px;">🟦</div>
-        <div style="font-weight: 700; font-size: 1.05rem; color: #38bdf8;">2. Kotak Proses (Hitung)</div>
+        <div style="font-weight: 700; font-size: 1.05rem; color: #fda4af;">2. Kotak Proses (Hitung)</div>
         <div style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">Berbentuk persegi panjang. Tempat komputer melakukan hitungan nyata seperti <code style="color:#6ee7b7">hasil = a + b</code>.</div>
       </div>
       <div class="glass-card" style="padding: 22px 24px;">
@@ -386,7 +461,7 @@
   <section id="pengenalan" style="max-width: 1200px; margin: 20px auto 60px; padding: 40px 24px; position: relative;">
     
     <div style="text-align: center; margin-bottom: 40px;">
-      <div class="pill pill-indigo" style="margin-bottom: 12px;">
+      <div class="pill pill-red" style="margin-bottom: 12px;">
         📚 PONDASI UTAMA PROGRAMMER
       </div>
       <h2 style="font-size: clamp(2rem, 3.8vw, 2.8rem); font-weight: 800; letter-spacing: -0.02em;">
@@ -401,12 +476,12 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px;">
       
       <!-- CARD 1: APA ITU ALGORITMA? -->
-      <div class="glass-card" style="padding: 32px; border-left: 4px solid #6366f1;">
+      <div class="glass-card" style="padding: 32px; border-left: 4px solid #e11d48;">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;">
-          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.35); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(225, 29, 72, 0.15); border: 1px solid rgba(225, 29, 72, 0.35); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
             🧩
           </div>
-          <span style="font-family: monospace; font-size: 0.78rem; font-weight: 700; color: #818cf8; background: rgba(99, 102, 241, 0.1); padding: 4px 10px; border-radius: 6px;">KONSEP 01</span>
+          <span style="font-family: monospace; font-size: 0.78rem; font-weight: 700; color: #fb7185; background: rgba(225, 29, 72, 0.1); padding: 4px 10px; border-radius: 6px;">KONSEP 01</span>
         </div>
 
         <h3 style="font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 12px;">
@@ -419,7 +494,7 @@
 
         <!-- Everyday Analogy Box -->
         <div style="background: rgba(10, 15, 26, 0.85); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px; margin-bottom: 18px;">
-          <div style="font-size: 0.8rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; margin-bottom: 6px;">🍜 Analogi Sehari-hari: Resep Mi Instan</div>
+          <div style="font-size: 0.8rem; font-weight: 700; color: #fda4af; text-transform: uppercase; margin-bottom: 6px;">🍜 Analogi Sehari-hari: Resep Mi Instan</div>
           <div style="font-size: 0.86rem; color: #94a3b8; line-height: 1.65;">
             Kamu tidak mungkin menyajikan mi sebelum airnya mendidih. Langkahnya harus urut: <br />
             <code>(1) Rebus air &rarr; (2) Masukkan mi &rarr; (3) Tuang bumbu &rarr; (4) Hidangkan</code>.<br />
@@ -434,12 +509,12 @@
       </div>
 
       <!-- CARD 2: APA ITU FLOWRUN? -->
-      <div class="glass-card" style="padding: 32px; border-left: 4px solid #06b6d4;">
+      <div class="glass-card" style="padding: 32px; border-left: 4px solid #e11d48;">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;">
-          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.35); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(225, 29, 72, 0.15); border: 1px solid rgba(225, 29, 72, 0.35); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
             ⚡
           </div>
-          <span style="font-family: monospace; font-size: 0.78rem; font-weight: 700; color: #22d3ee; background: rgba(6, 182, 212, 0.1); padding: 4px 10px; border-radius: 6px;">KONSEP 02</span>
+          <span style="font-family: monospace; font-size: 0.78rem; font-weight: 700; color: #fb7185; background: rgba(225, 29, 72, 0.1); padding: 4px 10px; border-radius: 6px;">KONSEP 02</span>
         </div>
 
         <h3 style="font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 12px;">
@@ -496,7 +571,7 @@
     </div>
 
     <!-- Simulator Workspace -->
-    <div class="glass-card glow-indigo" style="padding: 28px; border: 1px solid rgba(255, 255, 255, 0.1);">
+    <div class="glass-card glow-red" style="padding: 28px; border: 1px solid rgba(255, 255, 255, 0.1);">
       
       <!-- Interactive Inputs Bar -->
       <div style="background: rgba(10, 14, 24, 0.8); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 24px;">
@@ -543,7 +618,7 @@
           <!-- Variable Memory Inspector -->
           <div style="background: #090d16; border: 1px solid var(--border-subtle); border-radius: 14px; padding: 18px;">
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-              <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #818cf8; display: flex; align-items: center; gap: 6px;">
+              <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #fb7185; display: flex; align-items: center; gap: 6px;">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><line x1="2" y1="10" x2="22" y2="10"></line></svg>
                 Isi Memori Variabel
               </span>
@@ -566,7 +641,7 @@
 
           <!-- Step Guide / Story Explanation -->
           <div style="background: #090d16; border: 1px solid var(--border-subtle); border-radius: 14px; padding: 18px; flex: 1; display: flex; flex-direction: column;">
-            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #38bdf8; margin-bottom: 8px;">
+            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #fda4af; margin-bottom: 8px;">
               Apa yang Sedang Terjadi?
             </span>
             <div id="simExplanation" style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; flex: 1;">
@@ -769,7 +844,7 @@
   <section id="perkalian" style="max-width: 1200px; margin: 80px auto; padding: 40px 24px;">
     
     <div style="text-align: center; margin-bottom: 36px;">
-      <div class="pill pill-indigo" style="margin-bottom: 12px;">
+      <div class="pill pill-red" style="margin-bottom: 12px;">
         💡 Logika Perkalian Biasa
       </div>
       <h2 style="font-size: clamp(1.9rem, 3.5vw, 2.7rem); font-weight: 800; letter-spacing: -0.02em;">
@@ -781,7 +856,7 @@
     </div>
 
     <!-- Multiply Card Shell -->
-    <div class="glass-card" style="padding: 34px; border: 1px solid rgba(99, 102, 241, 0.35); background: linear-gradient(145deg, rgba(18, 24, 38, 0.9), rgba(10, 14, 23, 0.98));">
+    <div class="glass-card" style="padding: 34px; border: 1px solid rgba(225, 29, 72, 0.35); background: linear-gradient(145deg, rgba(18, 24, 38, 0.9), rgba(10, 14, 23, 0.98));">
       
       <!-- Slide Tab Selector for Multiply -->
       <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 30px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px;">
@@ -797,14 +872,14 @@
       <div id="multSlide1" style="display: block;">
         <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: start;">
           <div>
-            <span class="pill pill-indigo" style="margin-bottom: 12px;">Studi Kasus Matematika SMP</span>
+            <span class="pill pill-red" style="margin-bottom: 12px;">Studi Kasus Matematika SMP</span>
             <h3 style="font-size: 1.35rem; font-weight: 700; color: #fff; margin-bottom: 12px;">
               Menghitung Luas Persegi Panjang: 6 &times; 4
             </h3>
             <p style="color: #cbd5e1; font-size: 0.94rem; line-height: 1.7; margin-bottom: 16px;">
               Kamu diminta membuat diagram Flowrun untuk menghitung luas persegi panjang dengan rumus matematika:
             </p>
-            <div style="background: rgba(10, 15, 26, 0.85); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px; margin-bottom: 18px; font-family: monospace; font-size: 0.95rem; color: #38bdf8;">
+            <div style="background: rgba(10, 15, 26, 0.85); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px; margin-bottom: 18px; font-family: monospace; font-size: 0.95rem; color: #fda4af;">
               panjang = 6<br />
               lebar = 4<br />
               luas = panjang * lebar
@@ -819,7 +894,7 @@
             </div>
           </div>
 
-          <div style="background: rgba(14, 20, 32, 0.95); border: 1px dashed rgba(99, 102, 241, 0.4); border-radius: 16px; padding: 26px; text-align: center;">
+          <div style="background: rgba(14, 20, 32, 0.95); border: 1px dashed rgba(225, 29, 72, 0.4); border-radius: 16px; padding: 26px; text-align: center;">
             <div style="font-size: 2.4rem; margin-bottom: 12px;">📐</div>
             <h4 style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 10px;">
               Sudah Membayangkan Alurnya?
@@ -839,8 +914,8 @@
         <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: center;">
           
           <!-- SVG Flowchart Perkalian Biasa (Linear Flow) -->
-          <div style="background: #090d16; border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <div style="font-size: 0.72rem; color: #818cf8; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;">
+          <div style="background: #090d16; border: 1px solid rgba(225, 29, 72, 0.3); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div style="font-size: 0.72rem; color: #fb7185; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;">
               Diagram Alur: Assign Perkalian Biasa
             </div>
 
@@ -864,11 +939,11 @@
 
               <!-- 2. INPUT -->
               <rect x="80" y="75" width="180" height="40" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
-              <text x="170" y="100" text-anchor="middle" fill="#93c5fd" font-size="11" font-family="monospace">2. Input panjang=6, lebar=4</text>
+              <text x="170" y="100" text-anchor="middle" fill="#fda4af" font-size="11" font-family="monospace">2. Input panjang=6, lebar=4</text>
 
               <!-- 3. ASSIGN PERKALIAN -->
-              <rect x="75" y="155" width="190" height="40" rx="8" fill="rgba(99, 102, 241, 0.15)" stroke="#6366f1" stroke-width="2" />
-              <text x="170" y="180" text-anchor="middle" fill="#a5b4fc" font-size="11" font-weight="700" font-family="monospace">3. luas = panjang * lebar</text>
+              <rect x="75" y="155" width="190" height="40" rx="8" fill="rgba(225, 29, 72, 0.15)" stroke="#e11d48" stroke-width="2" />
+              <text x="170" y="180" text-anchor="middle" fill="#fda4af" font-size="11" font-weight="700" font-family="monospace">3. luas = panjang * lebar</text>
 
               <!-- 4. OUTPUT -->
               <rect x="85" y="235" width="170" height="40" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
@@ -910,40 +985,175 @@
 
   </section>
 
-  <!-- FOUNDER'S NOTE -->
-  <section style="max-width: 900px; margin: 40px auto 100px; padding: 0 24px;">
-    <div class="glass-card" style="padding: 38px; border-left: 4px solid #6366f1; background: linear-gradient(135deg, rgba(18, 25, 42, 0.85), rgba(9, 13, 22, 0.95));">
-      <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 18px;">
-        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #6366f1, #38bdf8); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.3rem; color: #fff;">
-          👨‍💻
+  <!-- ========================================================================= -->
+  <!-- SECTION: IDENTITAS KELOMPOK PENGEMBANG (SMK TELKOM MALANG) -->
+  <!-- ========================================================================= -->
+  <section id="kelompok" style="max-width: 1200px; margin: 60px auto 90px; padding: 40px 24px; position: relative;">
+    
+    <div style="text-align: center; margin-bottom: 48px;">
+      <div class="pill pill-red" style="margin-bottom: 12px;">
+        👥 TIM PENGEMBANG PROYEK &bull; MOKLET
+      </div>
+      <h2 style="font-size: clamp(2rem, 3.8vw, 2.8rem); font-weight: 800; letter-spacing: -0.02em;">
+        Identitas Kelompok Pengembang
+      </h2>
+      <p style="max-width: 720px; margin: 10px auto 0; color: var(--text-muted); font-size: 0.98rem; line-height: 1.7;">
+        Website pembelajaran interaktif Flowrun ini dikembangkan oleh tim siswa <strong>SMK Telkom Malang</strong> untuk menghadirkan visualisasi logika komputasi yang ramah, interaktif, dan elegan bagi siswa SMP.
+      </p>
+    </div>
+
+    <!-- 3 Member Profile Cards Grid -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 26px; margin-bottom: 45px;">
+      
+      <!-- MEMBER 1: BAIM IBRAHIM -->
+      <div class="glass-card" style="padding: 32px 28px; border-top: 4px solid #e11d48; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+            <div style="width: 58px; height: 58px; border-radius: 16px; background: linear-gradient(135deg, #e11d48, #9f1239); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 8px 24px rgba(225, 29, 72, 0.45); border: 2px solid rgba(255, 255, 255, 0.2);">
+              👨‍💻
+            </div>
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(225, 29, 72, 0.15); color: #fda4af; padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(225, 29, 72, 0.35);">
+              PROJECT LEAD &amp; DEV
+            </span>
+          </div>
+
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 4px;">
+            Baim Ibrahim
+          </h3>
+          <div style="font-size: 0.9rem; font-weight: 700; color: #fb7185; margin-bottom: 14px;">
+            Koordinator dan Pembuat Web
+          </div>
+
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin-bottom: 20px;">
+            Memimpin koordinasi seluruh proyek, menyusun struktur kode web mandiri, merancang engine visual SVG Flowrun, mengintegrasikan simulator pertambahan dan percabangan IF, serta audio haptic Web Audio API.
+          </p>
+        </div>
+
+        <div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;">
+            <span style="font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; background: rgba(225, 29, 72, 0.12); color: #fecdd3; border: 1px solid rgba(225, 29, 72, 0.25);">Koordinator Proyek</span>
+            <span style="font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; background: rgba(225, 29, 72, 0.12); color: #fecdd3; border: 1px solid rgba(225, 29, 72, 0.25);">Fullstack Web Dev</span>
+            <span style="font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; background: rgba(225, 29, 72, 0.12); color: #fecdd3; border: 1px solid rgba(225, 29, 72, 0.25);">Logic Architect</span>
+          </div>
+          <div style="font-size: 0.78rem; color: #94a3b8; border-top: 1px solid var(--border-subtle); padding-top: 12px; display: flex; align-items: center; justify-content: space-between;">
+            <span>SMK Telkom Malang</span>
+            <span style="color: #f43f5e; font-weight: 700;">Moklet</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEMBER 2: HISYAM AL KINDI -->
+      <div class="glass-card" style="padding: 32px 28px; border-top: 4px solid #f43f5e; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+            <div style="width: 58px; height: 58px; border-radius: 16px; background: linear-gradient(135deg, #f43f5e, #be123c); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 8px 24px rgba(244, 63, 94, 0.45); border: 2px solid rgba(255, 255, 255, 0.2);">
+              🎨
+            </div>
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(244, 63, 94, 0.15); color: #fecdd3; padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(244, 63, 94, 0.35);">
+              UI / UX SPECIALIST
+            </span>
+          </div>
+
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 4px;">
+            Hisyam Al Kindi
+          </h3>
+          <div style="font-size: 0.9rem; font-weight: 700; color: #f43f5e; margin-bottom: 14px;">
+            Desain Web
+          </div>
+
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin-bottom: 20px;">
+            Merancang antarmuka bernuansa Telkom Red yang elegan dan ramah mata, membuat animasi teks bertahap (*staggered fade-in*), efek hover kartu kaca (*glassmorphism*), dan penataan diagram visual yang intuitif.
+          </p>
+        </div>
+
+        <div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;">
+            <span style="font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; background: rgba(244, 63, 94, 0.12); color: #fecdd3; border: 1px solid rgba(244, 63, 94, 0.25);">UI/UX Design</span>
+            <span style="font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; background: rgba(244, 63, 94, 0.12); color: #fecdd3; border: 1px solid rgba(244, 63, 94, 0.25);">Visual Identity</span>
+            <span style="font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; background: rgba(244, 63, 94, 0.12); color: #fecdd3; border: 1px solid rgba(244, 63, 94, 0.25);">Animation &amp; Hover</span>
+          </div>
+          <div style="font-size: 0.78rem; color: #94a3b8; border-top: 1px solid var(--border-subtle); padding-top: 12px; display: flex; align-items: center; justify-content: space-between;">
+            <span>SMK Telkom Malang</span>
+            <span style="color: #f43f5e; font-weight: 700;">Moklet</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEMBER 3: IVANDER JOSEPH -->
+      <div class="glass-card" style="padding: 32px 28px; border-top: 4px solid #fb7185; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+            <div style="width: 58px; height: 58px; border-radius: 16px; background: linear-gradient(135deg, #fb7185, #e11d48); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 8px 24px rgba(251, 113, 133, 0.45); border: 2px solid rgba(255, 255, 255, 0.2);">
+              📊
+            </div>
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(251, 113, 133, 0.15); color: #ffe4e6; padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(251, 113, 133, 0.35);">
+              RESEARCH &amp; CONTENT
+            </span>
+          </div>
+
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 4px;">
+            Ivander Joseph
+          </h3>
+          <div style="font-size: 0.9rem; font-weight: 700; color: #fb7185; margin-bottom: 14px;">
+            Pencari Data
+          </div>
+
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin-bottom: 20px;">
+            Mengumpulkan materi dasar logika komputer untuk siswa, meriset contoh kasus konkret seperti KKM kelulusan sekolah (Remedial vs Lulus), konsep pertambahan dan perkalian biasa, serta menyusun narasi edukatif.
+          </p>
+        </div>
+
+        <div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;">
+            <span style="font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; background: rgba(251, 113, 133, 0.12); color: #ffe4e6; border: 1px solid rgba(251, 113, 133, 0.25);">Data Research</span>
+            <span style="font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; background: rgba(251, 113, 133, 0.12); color: #ffe4e6; border: 1px solid rgba(251, 113, 133, 0.25);">Curriculum Content</span>
+            <span style="font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; background: rgba(251, 113, 133, 0.12); color: #ffe4e6; border: 1px solid rgba(251, 113, 133, 0.25);">Case Study Analyst</span>
+          </div>
+          <div style="font-size: 0.78rem; color: #94a3b8; border-top: 1px solid var(--border-subtle); padding-top: 12px; display: flex; align-items: center; justify-content: space-between;">
+            <span>SMK Telkom Malang</span>
+            <span style="color: #fb7185; font-weight: 700;">Moklet</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Inspirational Moklet Quote Card -->
+    <div class="glass-card" style="padding: 34px; border-left: 4px solid #e11d48; background: linear-gradient(135deg, rgba(28, 10, 16, 0.88), rgba(14, 5, 8, 0.96));">
+      <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+        <div style="width: 48px; height: 48px; border-radius: 14px; background: linear-gradient(135deg, #e11d48, #be123c); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #fff; box-shadow: 0 4px 18px rgba(225, 29, 72, 0.4);">
+          🏆
         </div>
         <div>
-          <div style="font-weight: 700; font-size: 1.1rem; color: #fff;">Catatan dari Founder &amp; Chief Programmer</div>
-          <div style="font-size: 0.8rem; color: var(--text-dim);">Kinetix Technology Enterprise</div>
+          <div style="font-weight: 800; font-size: 1.08rem; color: #fff;">Pesan dari Kelompok Pengembang SMK Telkom Malang</div>
+          <div style="font-size: 0.78rem; color: #fda4af;">Moklet IT Innovation &bull; Pelopor Pendidikan Informatika Indonesia</div>
         </div>
       </div>
 
-      <blockquote style="font-style: italic; color: #cbd5e1; font-size: 1.02rem; line-height: 1.8; margin-bottom: 16px;">
-        "Programmer kelas dunia bukanlah orang yang mampu menulis kode paling rumit yang membingungkan orang lain. Programmer terbaik adalah mereka yang mampu mengurai masalah paling besar menjadi <strong>aliran logika sederhana yang bahkan anak SMP pun dapat memahaminya dengan senyuman</strong>. Jika kamu paham pertambahan dan logika IF, kamu sudah punya pondasi menjadi insinyur teknologi masa depan."
+      <blockquote style="font-style: italic; color: #cbd5e1; font-size: 0.98rem; line-height: 1.8; margin-bottom: 14px;">
+        "Sebagai siswa SMK Telkom Malang, kami ingin membuktikan bahwa coding bukanlah momok yang menakutkan. Saat logika komputasi disajikan secara visual dengan Flowrun, siapa pun&mdash;bahkan adik-adik di bangku SMP&mdash;dapat memahaminya dengan mudah, jernih, dan menyenangkan."
       </blockquote>
 
-      <div style="font-size: 0.82rem; color: #818cf8; font-weight: 600;">
-        — Kinetix Technology Group • Belajar Coding Masa Depan
+      <div style="font-size: 0.82rem; color: #fb7185; font-weight: 700;">
+        &mdash; Baim Ibrahim, Hisyam Al Kindi, Ivander Joseph &bull; SMK Telkom Malang
       </div>
     </div>
+
   </section>
 
   <!-- FOOTER -->
-  <footer style="border-top: 1px solid var(--border-subtle); padding: 36px 24px; text-align: center; color: var(--text-dim); font-size: 0.82rem; background: #06080d;">
+  <footer style="border-top: 1px solid rgba(225, 29, 72, 0.2); padding: 36px 24px; text-align: center; color: var(--text-dim); font-size: 0.84rem; background: #050204;">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
-      <div>
-        &copy; 2026 <strong>FLOWRUN FOR EVERYONE</strong>. Desain Elegan, Logika Sederhana &amp; Berkelas.
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="color: #e11d48; font-size: 1.1rem;">🏛️</span>
+        <span>&copy; 2026 <strong>SMK TELKOM MALANG (MOKLET)</strong> &bull; Proyek Edukasi Flowrun Interaktif.</span>
       </div>
       <div style="display: flex; gap: 20px;">
-        <a href="#pengenalan" style="color: var(--text-dim); text-decoration: none;">Konsep</a>
-        <a href="#simulator" style="color: var(--text-dim); text-decoration: none;">Simulator</a>
-        <a href="#tantangan" style="color: var(--text-dim); text-decoration: none;">Tantangan Nilai</a>
-        <a href="#perkalian" style="color: var(--text-dim); text-decoration: none;">Perkalian</a>
+        <a href="#pengenalan" style="color: var(--text-dim); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fda4af'" onmouseout="this.style.color='var(--text-dim)'">Konsep</a>
+        <a href="#simulator" style="color: var(--text-dim); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fda4af'" onmouseout="this.style.color='var(--text-dim)'">Simulator</a>
+        <a href="#tantangan" style="color: var(--text-dim); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fda4af'" onmouseout="this.style.color='var(--text-dim)'">Tantangan Nilai</a>
+        <a href="#perkalian" style="color: var(--text-dim); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fda4af'" onmouseout="this.style.color='var(--text-dim)'">Perkalian</a>
+        <a href="#kelompok" style="color: #fda4af; text-decoration: none; font-weight: 600;">Identitas Tim</a>
       </div>
     </div>
   </footer>
@@ -1126,7 +1336,7 @@
 
           <g id="node-t-input" class="flow-node">
             <rect x="100" y="75" width="160" height="38" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
-            <text x="180" y="99" text-anchor="middle" fill="#93c5fd" font-size="11" font-family="monospace">2. Baca a=${userA}, b=${userB}</text>
+            <text x="180" y="99" text-anchor="middle" fill="#fda4af" font-size="11" font-family="monospace">2. Baca a=${userA}, b=${userB}</text>
           </g>
 
           <g id="node-t-calc" class="flow-node">
@@ -1172,7 +1382,7 @@
 
           <g id="node-c-input" class="flow-node">
             <rect x="105" y="70" width="150" height="38" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
-            <text x="180" y="94" text-anchor="middle" fill="#93c5fd" font-size="11" font-family="monospace">angka = ${userAngka}</text>
+            <text x="180" y="94" text-anchor="middle" fill="#fda4af" font-size="11" font-family="monospace">angka = ${userAngka}</text>
           </g>
 
           <g id="node-c-cond" class="flow-node">
@@ -1225,18 +1435,18 @@
         if (simStep === 1) {
           highlightSimNode('node-t-input');
           simVarTableBody.innerHTML = `
-            <tr><td style="padding:6px 8px; color:#818cf8;">a</td><td style="padding:6px 8px; font-weight:bold; color:#fff;" class="val-updated">${userA}</td><td style="padding:6px 8px; color:#94a3b8;">Input angka pertama</td></tr>
-            <tr><td style="padding:6px 8px; color:#818cf8;">b</td><td style="padding:6px 8px; font-weight:bold; color:#fff;" class="val-updated">${userB}</td><td style="padding:6px 8px; color:#94a3b8;">Input angka kedua</td></tr>
-            <tr><td style="padding:6px 8px; color:#818cf8;">hasil</td><td style="padding:6px 8px; color:#64748b;">(belum dihitung)</td><td style="padding:6px 8px; color:#64748b;">Menunggu proses</td></tr>
+            <tr><td style="padding:6px 8px; color:#fb7185;">a</td><td style="padding:6px 8px; font-weight:bold; color:#fff;" class="val-updated">${userA}</td><td style="padding:6px 8px; color:#94a3b8;">Input angka pertama</td></tr>
+            <tr><td style="padding:6px 8px; color:#fb7185;">b</td><td style="padding:6px 8px; font-weight:bold; color:#fff;" class="val-updated">${userB}</td><td style="padding:6px 8px; color:#94a3b8;">Input angka kedua</td></tr>
+            <tr><td style="padding:6px 8px; color:#fb7185;">hasil</td><td style="padding:6px 8px; color:#64748b;">(belum dihitung)</td><td style="padding:6px 8px; color:#64748b;">Menunggu proses</td></tr>
           `;
           simExplanation.innerHTML = `Komputer membaca input: variabel <code>a = ${userA}</code> dan <code>b = ${userB}</code> sudah siap di dalam memori.`;
         } else if (simStep === 2) {
           const sum = userA + userB;
           highlightSimNode('node-t-calc');
           simVarTableBody.innerHTML = `
-            <tr><td style="padding:6px 8px; color:#818cf8;">a</td><td style="padding:6px 8px; color:#fff;">${userA}</td><td style="padding:6px 8px; color:#94a3b8;">Angka pertama</td></tr>
-            <tr><td style="padding:6px 8px; color:#818cf8;">b</td><td style="padding:6px 8px; color:#fff;">${userB}</td><td style="padding:6px 8px; color:#94a3b8;">Angka kedua</td></tr>
-            <tr><td style="padding:6px 8px; color:#818cf8;">hasil</td><td style="padding:6px 8px; font-weight:bold; color:#6ee7b7;" class="val-updated">${sum}</td><td style="padding:6px 8px; color:#34d399;">Dihitung (${userA} + ${userB})</td></tr>
+            <tr><td style="padding:6px 8px; color:#fb7185;">a</td><td style="padding:6px 8px; color:#fff;">${userA}</td><td style="padding:6px 8px; color:#94a3b8;">Angka pertama</td></tr>
+            <tr><td style="padding:6px 8px; color:#fb7185;">b</td><td style="padding:6px 8px; color:#fff;">${userB}</td><td style="padding:6px 8px; color:#94a3b8;">Angka kedua</td></tr>
+            <tr><td style="padding:6px 8px; color:#fb7185;">hasil</td><td style="padding:6px 8px; font-weight:bold; color:#6ee7b7;" class="val-updated">${sum}</td><td style="padding:6px 8px; color:#34d399;">Dihitung (${userA} + ${userB})</td></tr>
           `;
           simExplanation.innerHTML = `Proses pertambahan dijalankan: <code>${userA} + ${userB} = ${sum}</code>. Nilai ${sum} disimpan ke variabel <code>hasil</code>.`;
         } else if (simStep === 3) {
@@ -1244,9 +1454,9 @@
           highlightSimNode('node-t-output');
           simExplanation.innerHTML = `Komputer mencetak hasil ke layar: <strong>${sum}</strong>!`;
           simFinalVerdict.style.display = 'block';
-          simFinalVerdict.style.background = 'rgba(56, 189, 248, 0.15)';
-          simFinalVerdict.style.color = '#38bdf8';
-          simFinalVerdict.style.border = '1px solid rgba(56, 189, 248, 0.3)';
+          simFinalVerdict.style.background = 'rgba(225, 29, 72, 0.15)';
+          simFinalVerdict.style.color = '#fda4af';
+          simFinalVerdict.style.border = '1px solid rgba(225, 29, 72, 0.3)';
           simFinalVerdict.innerHTML = `🖥️ Layar Monitor Menampilkan: ${sum}`;
         } else if (simStep === 4) {
           highlightSimNode('node-t-end', true);
@@ -1260,8 +1470,8 @@
         if (simStep === 1) {
           highlightSimNode('node-c-input');
           simVarTableBody.innerHTML = `
-            <tr><td style="padding:6px 8px; color:#818cf8;">angka</td><td style="padding:6px 8px; font-weight:bold; color:#fff;" class="val-updated">${userAngka}</td><td style="padding:6px 8px; color:#94a3b8;">Angka yang dimasukkan</td></tr>
-            <tr><td style="padding:6px 8px; color:#818cf8;">kategori</td><td style="padding:6px 8px; color:#64748b;">(belum dievaluasi)</td><td style="padding:6px 8px; color:#64748b;">Menunggu IF</td></tr>
+            <tr><td style="padding:6px 8px; color:#fb7185;">angka</td><td style="padding:6px 8px; font-weight:bold; color:#fff;" class="val-updated">${userAngka}</td><td style="padding:6px 8px; color:#94a3b8;">Angka yang dimasukkan</td></tr>
+            <tr><td style="padding:6px 8px; color:#fb7185;">kategori</td><td style="padding:6px 8px; color:#64748b;">(belum dievaluasi)</td><td style="padding:6px 8px; color:#64748b;">Menunggu IF</td></tr>
           `;
           simExplanation.innerHTML = `Komputer membaca angka <strong>${userAngka}</strong>. Sistem bersiap mengecek apakah angka ini bernilai &ge; 0.`;
         } else if (simStep === 2) {
@@ -1273,8 +1483,8 @@
           if (isPositif) {
             highlightSimNode('node-c-positif', true);
             simVarTableBody.innerHTML = `
-              <tr><td style="padding:6px 8px; color:#818cf8;">angka</td><td style="padding:6px 8px; color:#fff;">${userAngka}</td><td style="padding:6px 8px; color:#94a3b8;">Angka yang dimasukkan</td></tr>
-              <tr><td style="padding:6px 8px; color:#818cf8;">kategori</td><td style="padding:6px 8px; font-weight:bold; color:#34d399;" class="val-updated">POSITIF</td><td style="padding:6px 8px; color:#34d399;">Karena ${userAngka} &ge; 0</td></tr>
+              <tr><td style="padding:6px 8px; color:#fb7185;">angka</td><td style="padding:6px 8px; color:#fff;">${userAngka}</td><td style="padding:6px 8px; color:#94a3b8;">Angka yang dimasukkan</td></tr>
+              <tr><td style="padding:6px 8px; color:#fb7185;">kategori</td><td style="padding:6px 8px; font-weight:bold; color:#34d399;" class="val-updated">POSITIF</td><td style="padding:6px 8px; color:#34d399;">Karena ${userAngka} &ge; 0</td></tr>
             `;
             simExplanation.innerHTML = `Angka <strong>${userAngka}</strong> dikategorikan sebagai <strong>BILANGAN POSITIF</strong> karena bernilai 0 atau lebih.`;
             simFinalVerdict.style.display = 'block';
@@ -1285,8 +1495,8 @@
           } else {
             highlightSimNode('node-c-negatif', false);
             simVarTableBody.innerHTML = `
-              <tr><td style="padding:6px 8px; color:#818cf8;">angka</td><td style="padding:6px 8px; color:#fff;">${userAngka}</td><td style="padding:6px 8px; color:#94a3b8;">Angka yang dimasukkan</td></tr>
-              <tr><td style="padding:6px 8px; color:#818cf8;">kategori</td><td style="padding:6px 8px; font-weight:bold; color:#f43f5e;" class="val-updated">NEGATIF</td><td style="padding:6px 8px; color:#f87171;">Karena ${userAngka} &lt; 0</td></tr>
+              <tr><td style="padding:6px 8px; color:#fb7185;">angka</td><td style="padding:6px 8px; color:#fff;">${userAngka}</td><td style="padding:6px 8px; color:#94a3b8;">Angka yang dimasukkan</td></tr>
+              <tr><td style="padding:6px 8px; color:#fb7185;">kategori</td><td style="padding:6px 8px; font-weight:bold; color:#f43f5e;" class="val-updated">NEGATIF</td><td style="padding:6px 8px; color:#f87171;">Karena ${userAngka} &lt; 0</td></tr>
             `;
             simExplanation.innerHTML = `Angka <strong>${userAngka}</strong> dikategorikan sebagai <strong>BILANGAN NEGATIF</strong> karena berada di bawah 0.`;
             simFinalVerdict.style.display = 'block';
@@ -1315,15 +1525,15 @@
       
       if (currentMode === 'tambah') {
         simVarTableBody.innerHTML = `
-          <tr><td style="padding:6px 8px; color:#818cf8;">a</td><td style="padding:6px 8px; color:#fff;">${userA}</td><td style="padding:6px 8px; color:#94a3b8;">Input angka 1</td></tr>
-          <tr><td style="padding:6px 8px; color:#818cf8;">b</td><td style="padding:6px 8px; color:#fff;">${userB}</td><td style="padding:6px 8px; color:#94a3b8;">Input angka 2</td></tr>
-          <tr><td style="padding:6px 8px; color:#818cf8;">hasil</td><td style="padding:6px 8px; color:#64748b;">?</td><td style="padding:6px 8px; color:#64748b;">Belum dihitung</td></tr>
+          <tr><td style="padding:6px 8px; color:#fb7185;">a</td><td style="padding:6px 8px; color:#fff;">${userA}</td><td style="padding:6px 8px; color:#94a3b8;">Input angka 1</td></tr>
+          <tr><td style="padding:6px 8px; color:#fb7185;">b</td><td style="padding:6px 8px; color:#fff;">${userB}</td><td style="padding:6px 8px; color:#94a3b8;">Input angka 2</td></tr>
+          <tr><td style="padding:6px 8px; color:#fb7185;">hasil</td><td style="padding:6px 8px; color:#64748b;">?</td><td style="padding:6px 8px; color:#64748b;">Belum dihitung</td></tr>
         `;
         simExplanation.innerHTML = `Siap! Tekan tombol <strong>"Langkah Berikutnya (Step)"</strong> untuk menjalankan alur pertambahan.`;
       } else {
         simVarTableBody.innerHTML = `
-          <tr><td style="padding:6px 8px; color:#818cf8;">angka</td><td style="padding:6px 8px; color:#fff;">${userAngka}</td><td style="padding:6px 8px; color:#94a3b8;">Angka uji</td></tr>
-          <tr><td style="padding:6px 8px; color:#818cf8;">kategori</td><td style="padding:6px 8px; color:#64748b;">?</td><td style="padding:6px 8px; color:#64748b;">Menunggu IF</td></tr>
+          <tr><td style="padding:6px 8px; color:#fb7185;">angka</td><td style="padding:6px 8px; color:#fff;">${userAngka}</td><td style="padding:6px 8px; color:#94a3b8;">Angka uji</td></tr>
+          <tr><td style="padding:6px 8px; color:#fb7185;">kategori</td><td style="padding:6px 8px; color:#64748b;">?</td><td style="padding:6px 8px; color:#64748b;">Menunggu IF</td></tr>
         `;
         simExplanation.innerHTML = `Siap! Coba ubah angka di atas (positif atau negatif), lalu klik <strong>"Langkah Berikutnya (Step)"</strong> untuk melihat ke mana alurnya pergi.`;
       }
